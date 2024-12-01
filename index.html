@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Editing Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to manage video play behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+
+            videos.forEach(video => {
+                video.addEventListener('play', function() {
+                    // Pause all other videos when one starts playing
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== video) {
+                            otherVideo.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -13,11 +30,9 @@
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#Sample videos">sample videos</a></li>
-
+                <li><a href="#Sample-videos">Sample Videos</a></li>
                 <li><a href="#youtube-videos">YouTube Videos</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
         </nav>
     </header>
@@ -37,7 +52,7 @@
                     <source src="video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Introducing myself and my services </p>
+                <p>Introducing myself and my services</p>
             </div>
             <div class="video-card">
                 <video controls>
@@ -50,7 +65,7 @@
         </div>
     </section>
 
-    <section id="Sample videos" class="section">
+    <section id="Sample-videos" class="section">
         <h2>Here are some of my sample works which I have done for clients.</h2>
         <div class="video-grid">
             <div class="video-card">
@@ -74,10 +89,10 @@
                 </video>
                 <p>Sample</p>
             </div>
-            
             <!-- Add more video cards as needed -->
         </div>
     </section>
+
     <section id="portfolio" class="section">
         <h2>Reels</h2>
         <div class="video-grid">
@@ -86,22 +101,21 @@
                     <source src="reels5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Reels </p>
+                <p>Reels</p>
             </div>
-            <div class="video-grid">
             <div class="video-card">
                 <video controls>
                     <source src="reels6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Reels </p>
+                <p>Reels</p>
             </div>
             <div class="video-card">
                 <video controls>
                     <source src="rels1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Reels </p>
+                <p>Reels</p>
             </div>
             <div class="video-card">
                 <video controls>
@@ -127,6 +141,7 @@
             <!-- Add more video cards as needed -->
         </div>
     </section>
+
     <section id="youtube-videos" class="section">
         <h2>YouTube Videos</h2>
         <p>Below are some of my YouTube videos showcasing my work:</p>
